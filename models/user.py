@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""
-Module of Class: City
-"""
+"""Module Class: User"""
 from models.base_model import BaseModel
 
 
-class City(BaseModel):
-    """Class: City"""
-    state_id = ""
-    name = ""
-    
+class User(BaseModel):
+    """Class: User"""
+    email = ""
+    password = ""
+    first_name = ""
+    last_name = ""
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

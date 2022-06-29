@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module Class: Place
+"""
 from models.base_model import BaseModel
 
 
