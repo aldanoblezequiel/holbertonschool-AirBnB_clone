@@ -1,6 +1,6 @@
-#AirBnB_clone
+# AirBnB_clone
 
-##Concept
+## Concept
 
 * A command interpreter to manipulate data without a visual interface, like in a Shell (perfect for development and debugging)
 
@@ -10,7 +10,7 @@
 
 * An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them)
 
-##First step: Write a command interpreter to manage your AirBnB objects. This is the first step towards building your first full web application: the AirBnB clone.
+## First step: Write a command interpreter to manage your AirBnB objects. This is the first step towards building your first full web application: the AirBnB clone.
 
 ***This first step is very important because you will use what you build during this project with all other following projects.***
 
