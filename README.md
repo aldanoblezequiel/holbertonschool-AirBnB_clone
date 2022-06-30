@@ -152,3 +152,7 @@ EOF  help  quit
 $
 
 ```
+
+## Examples
+
+![65f4a1dd9c51265f49d0](https://user-images.githubusercontent.com/98347450/176753474-73587c02-91d9-4065-8dbf-a98c12a319df.png)
