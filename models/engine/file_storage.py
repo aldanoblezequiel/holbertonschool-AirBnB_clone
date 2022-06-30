@@ -14,8 +14,8 @@ from models.review import Review
 
 
 class FileStorage:
-    """Class: FileStorage: Serializes to
-    JSON and deserializes JSON to object"""
+      """Class: FileStorage: Serializes to
+      JSON and deserializes JSON to object"""
     __file_path = "file.json"
     __objects = {}
     __classes = {
@@ -26,4 +26,12 @@ class FileStorage:
         "State": State,
         "Place": Place,
         "Review": Review
-                }
+               }
+    
+    def all(self):
+        """Returns the dictionary __objects"""
+        return self.__objects
+
+    def save(self):
+        """Serializes objetcs to the JSON file"""
+
