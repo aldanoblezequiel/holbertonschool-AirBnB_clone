@@ -138,6 +138,7 @@ e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
 ## Execution
 
 """
+
 $ ./console.py
 (hbnb) help
 
