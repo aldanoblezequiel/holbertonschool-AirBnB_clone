@@ -139,6 +139,8 @@ e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
 
 ## Execution
 
+Your shell should work like this in interactive mode:
+
 ```
 
 $ ./console.py
@@ -154,3 +156,32 @@ EOF  help  quit
 $
 
 ```
+
+But also in non-interactive mode: (like the Shell project in C)
+
+```
+
+$ echo "help" | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
+
+```
+
+*All tests should also pass in non-interactive mode: $ echo "python3 -m unittest discover tests" | bash*
+
