@@ -15,20 +15,13 @@ class BaseModel():
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
                     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
-<<<<<<< HEAD
                     if key != "__class__":
                         setattr(self, key, value)
-=======
-                if key != "__class__":
-                    setattr(self, key, value)
->>>>>>> 4a22a19674cb15817924db0c786bf447bc6fada9
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.update_at = datetime.now()
             models.storage.new(self)
-<<<<<<< HEAD
-=======
 
     def save(self):
         """Updates the public instance attribute
@@ -40,7 +33,16 @@ class BaseModel():
     def to_dict(self):
         """Returns a dictionary containing all keys/
         values of the instance"""
-        key_dictionary = self.__dict__.copy()
+        dict = {"__class__": self.__class__.__name__}
+        for key, value in self.__dict__.items():
+            if key in ["created_at", "updated_at"]:
+                dict[key] = value.isoformat()
+            else:
+                dict[key] = value
+        return dict 
 
 
->>>>>>> 4a22a19674cb15817924db0c786bf447bc6fada9
+    def __str__(self):
+        """
+        Returns a string with the information of the object"""
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
