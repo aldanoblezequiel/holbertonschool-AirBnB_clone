@@ -134,3 +134,20 @@ e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
 * All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 
 * We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+
+## Execution
+
+"""
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb) 
+(hbnb) 
+(hbnb) quit
+$
+
+"""
