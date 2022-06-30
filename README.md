@@ -1,5 +1,7 @@
 # AirBnB_clone
 
+![65f4a1dd9c51265f49d0](https://user-images.githubusercontent.com/98347450/176753474-73587c02-91d9-4065-8dbf-a98c12a319df.png)
+
 ## Concept
 
 * A command interpreter to manipulate data without a visual interface, like in a Shell (perfect for development and debugging)
@@ -134,3 +136,53 @@ e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
 * All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 
 * We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+
+## Execution
+
+Your shell should work like this in interactive mode:
+
+```
+
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb) 
+(hbnb) 
+(hbnb) quit
+$
+
+```
+
+But also in non-interactive mode: (like the Shell project in C)
+
+```
+
+$ echo "help" | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
+
+```
+
+*All tests should also pass in non-interactive mode: $ echo "python3 -m unittest discover tests" | bash*
+
+![815046647d23428a14ca](https://user-images.githubusercontent.com/98347450/176764791-0edd30cc-fc6a-4523-a737-318b583ae669.png)
