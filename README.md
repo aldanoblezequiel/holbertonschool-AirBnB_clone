@@ -58,8 +58,7 @@
 
 * How to create a Python package ?
 
-< First, we create a directory and give it a package name, preferably related to its operation. Then we put the classes and the required functions in it. Finally we create an __init__.py file inside the directory, to let Python know that the directory is a package. >
-
+* First, we create a directory and give it a package name, preferably related to its operation. Then we put the classes and the required functions in it. Finally we create an __init__.py file inside the directory, to let Python know that the directory is a package.
 * How to create a command interpreter in Python using the cmd module ?
 
 * What is Unit testing and how to implement it in a large project ?
