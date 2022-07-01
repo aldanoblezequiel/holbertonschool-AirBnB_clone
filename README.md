@@ -197,6 +197,6 @@ $
 |---------|-----------|
 | quit | To exit the console |
 | EOF | To exit the console by EOF |
-| Empty Line + ENTER | ..... |
+| Empty Line + ENTER | Shouldn’t execute anything |
 | help | Display the help documention |
 
