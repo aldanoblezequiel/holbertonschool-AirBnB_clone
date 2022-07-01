@@ -199,4 +199,8 @@ $
 | EOF | To exit the console by EOF |
 | Empty Line + ENTER | Shouldn’t execute anything |
 | help | Display the help documention |
+| all + class | prints all string representation of all instances |
+| show + class | print the string representation of an instance based|
+| create + class | create a new instance |
+| destroy | destroy Base Model |
 
