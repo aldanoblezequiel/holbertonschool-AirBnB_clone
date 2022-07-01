@@ -39,5 +39,40 @@ class HBNBCommand(cmd.Cmd):
         """line command"""
         pass
 
+    def do_help(self):
+        """help documentation"""
+
+        pass
+
+    def do_create(self, arg):
+        """create a new instance"""
+        pass
+
+    def do_show(self, arg):
+        """print the string representation
+        of an instance based"""
+        pass
+
+    def do_destroy(self, arg):
+        """destroy BaseModel"""
+        pass
+
+    def all(self):
+        """prints all string representation of
+        all instances"""
+        pass
+
+    def update(self):
+        """Updates an instance based on the
+        class name and id by adding or 
+        updating attribute"""
+        pass
+
+    def do_ex(self, arg):
+        """value for the attribute name doesn´t
+        exist"""
+        print("value missing")
+
+
     if __name__ == '__main__':
         HBNBCommand().cmdloop()
