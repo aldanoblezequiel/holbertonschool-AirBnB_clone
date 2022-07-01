@@ -5,10 +5,11 @@ import models
 from datetime import datetime
 from uuid import uuid4
 
+
 class BaseModel():
-    """Class: BaseModel:Defines bases 
-       for the rest of the classes
-    """
+    """Class: BaseModel:Defines bases
+       for the rest of the classes"""
+
     def __init__(self, *args, **kwargs):
         """Initializing BaseModel"""
         if len(kwargs) != 0:
@@ -17,12 +18,10 @@ class BaseModel():
                     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                     if key != "__class__":
                         setattr(self, key, value)
-                if key != "__class__":
-                    setattr(self, key, value)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
-            self.update_at = datetime.now()
+            self.updated_at = datetime.now()
             models.storage.new(self)
 
     def save(self):
@@ -30,7 +29,6 @@ class BaseModel():
         updated_at with the current datetime"""
         self.update_at = datetime.now()
         models.storage.save()
-        print(datetime.now())
 
     def to_dict(self):
         """Returns a dictionary containing all keys/
@@ -41,11 +39,8 @@ class BaseModel():
                 dict[key] = value.isoformat()
             else:
                 dict[key] = value
-        return dict 
-
+        return dict
 
     def __str__(self):
-        """
-        Returns a string with the information of the object
-        """
-        key_dictionary = self.__dict__.copy()
+        """Returns a string with the information of the object"""
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
