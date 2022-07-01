@@ -195,5 +195,8 @@ $
 
 | Command | Description |
 -----------------------
-quit | To exit the console 
+| quit | To exit the console |
+| EOF | To exit the console by EOF |
+| Empty Line + ENTER | ..... |
+| help | Display the help documention |
 
