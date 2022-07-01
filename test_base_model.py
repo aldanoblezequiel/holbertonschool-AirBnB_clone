@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+import sys
+import sys.path.insert(0, './moodels')
 from models.base_model import BaseModel
 
+sys.path.insert(0, './models')
 my_model = BaseModel()
 my_model.name = "My First Model"
 my_model.my_number = 89
