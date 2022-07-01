@@ -195,5 +195,5 @@ $
 
 | Command | Description |
 -----------------------
-| quit | To exit the console |
---------------------------
+quit | To exit the console 
+
