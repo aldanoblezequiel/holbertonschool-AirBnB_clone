@@ -35,13 +35,10 @@ class FileStorage:
             json.dump(my_dict, json_file)
 
     def new(self, obj):
-        """  """
+        """Sets in __objects the obj with the
+        key <obj class name>.id"""
         self.__objects.update({f"{obj.__class__.__name__}.{obj.id}": obj})
 
     def reload(self):
-        """ """
-        if os.path.exists(self.__file__path) is True:
-            with open(self.__file_path, "r", encoding="utf-8") as fd:
-                dictJ = json.load(fd)
-                for key, value in dictJ.items():
-                    self.__objects[key] = eval(value['__classs__'])(**value)
+        """Deserializes the Json file to
+        __objects"""
