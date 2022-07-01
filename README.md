@@ -205,3 +205,31 @@ $
 | destroy + class name + id  | destroy Base Model |
 | update + class name + id + attribute name + attribute value | Updates an instance |
 
+## More classes!
+
+| Classes | Attributes | Description |
+|---------|------------|-------------|
+| State   | name  | string - empty string |
+| City | state_id | string - empty string: it will be the State.id |
+|      | name     | string - empty string     | 
+| Amenity | name | string - empty string |
+| Place | city_id | string - empty string: it will be the City.id |
+|        | user_id | string - empty string: it will be the User.id |
+|        | name | string - empty string |
+|        | description | string - empty string |
+|        | number_rooms | integer - 0 |
+|        | number_bathrooms | integer - 0 |
+|        | max_guest | integer - 0 |
+|        | price_by_night | integer - 0 |
+|        | latitude | float - 0.0 |
+|        | longitude | float - 0.0 |
+|        | amenity_ids | list of string - empty list: it will be the list of Amenity.id later |
+| Review | place_id | string - empty string: it will be the Place.id |
+|        | user_id | string - empty string: it will be the User.id |
+|        | text | string - empty string |
+
+
+# 🤹🏻‍♂️ Own examples 🤹🏻‍♂️
+
+
+| ![Captura de pantalla (6)](https://user-images.githubusercontent.com/98347450/176949554-7d488e38-bfa8-40e5-bffb-71b0df984c55.png) | ![Captura de pantalla (7)](https://user-images.githubusercontent.com/98347450/176949612-1979a5f8-1d36-4945-ad8c-87886bab0f6d.png) |
