@@ -194,7 +194,7 @@ $
 *Prompt* : (hbnb)
 
 | Command | Description |
------------------------
+|---------|-----------|
 | quit | To exit the console |
 | EOF | To exit the console by EOF |
 | Empty Line + ENTER | ..... |
