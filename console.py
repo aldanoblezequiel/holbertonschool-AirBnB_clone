@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-"""
 
-"""
-
+""" import modules"""
 
 import sys
-import models
 import encodings
 import cmd
 import json
@@ -18,18 +15,17 @@ from models.state import State
 from models.review import Review
 from models.place import Place
 from models.city import City
-from models.amenity import Amenity 
+from models.amenity import Amenity
 
-"""
+""" file class HBNBCommand """
 
-"""
 
 class HBNBCommand(cmd.Cmd):
     """class"""
 
     prompt = "(hbnb) "
-    modelss = ["BaseModel", "City", "User", "Place", "State", 
-            "Review", "Amenity"]
+    clases = ["BaseModel", "City", "User", "Place",
+            "State", "Review", "Amenity"]
 
     def do_quit(self, arg):
         """command Quit to exit the program"""
@@ -38,6 +34,10 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, arg):
         """command EOF to exit the program """
         sys.exit()
+
+    def emptyline(self):
+        """line command"""
+        pass
 
     if __name__ == '__main__':
         HBNBCommand().cmdloop()
