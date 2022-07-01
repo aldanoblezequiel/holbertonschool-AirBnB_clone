@@ -205,3 +205,10 @@ $
 | destroy + class name + id  | destroy Base Model |
 | update + class name + id + attribute name + attribute value | Updates an instance |
 
+## More classes!
+
+| Classes | Attributes | Description |
+|---------|------------|-------------|
+| State   | name  | string - empty string |
+| City | state_id | string - empty string: it will be the State.id |
+|      | name     | string - empty string     | 
