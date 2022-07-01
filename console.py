@@ -24,8 +24,9 @@ class HBNBCommand(cmd.Cmd):
     """class"""
 
     prompt = "(hbnb) "
+
     classes = ["BaseModel", "City", "User", "Place",
-            "State", "Review", "Amenity"]
+"State", "Review", "Amenity"]
 
     def do_quit(self, arg):
         """command Quit to exit the program"""
@@ -48,7 +49,7 @@ class HBNBCommand(cmd.Cmd):
         (to the JSON file) and prints the id."""
         if not arg:
             print("** class doesn't exist **")
-        elif not arg in HBNBCommand.classes:
+        elif arg not in HBNBCommand.classes:
             print("** class name missing **")
         else:
             new_obj = eval(arg)()
@@ -105,7 +106,7 @@ class HBNBCommand(cmd.Cmd):
                 list.pop(new_list)
             with open("file.json", 'w', encoding="utf-8") as f:
                 json.dump(list, f)
-                return 
+                return
 
     def do_all(self, arg):
         """Prints all string representation of all
@@ -124,11 +125,11 @@ class HBNBCommand(cmd.Cmd):
             for key, value in dict_obj.items():
                 if value.__class__.__name__ == arg:
                     new_list.append(str(value))
-            print(new_list)        
+            print(new_list)
 
     def do_update(selfi, arg):
         """Updates an instance based on the
-        class name and id by adding or 
+        class name and id by adding or
         updating attribute"""
         array = arg.split()
         if len(array) < 1:
@@ -200,6 +201,7 @@ class HBNBCommand(cmd.Cmd):
                 if new_key[0] == new_arg[0]:
                     count += 1
         print(count)
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
