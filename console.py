@@ -40,10 +40,6 @@ class HBNBCommand(cmd.Cmd):
         """line command"""
         pass
 
-    def do_help(self):
-        """help documentation"""
-        pass
-
     def do_create(self, arg):
         """Creates a new instance of BaseModel, saves it
         (to the JSON file) and prints the id."""
