@@ -203,4 +203,5 @@ $
 | show + class name + id | print the string representation of an instance based|
 | create + class name| create a new instance |
 | destroy + class name + id  | destroy Base Model |
+| update + class name + id + attribute name + attribute value |
 
