@@ -29,10 +29,10 @@ class FileStorage:
     def save(self):
         """Serializes objetcs to the JSON file"""
         my_dict = {}
-        for name, value in self.__objects.items():
-            my_dict[name] = value.to_dict()
-        with open(self.__file_path, "w", encoding="utf-8") as json_file:
-            json.dump(my_dict, json_file)
+        for key, value in self.__objects.items():
+            my_dict[key] = value.to_dict()
+        with open(self.__file_path, "w", encoding="utf-8") as f:
+            json.dump(my_dict, f)
 
     def new(self, obj):
         """Sets in __objects the obj with the
@@ -42,3 +42,8 @@ class FileStorage:
     def reload(self):
         """Deserializes the Json file to
         __objects"""
+        if os.path.exists(self.__file_path) is True:
+            with open(self.__file_path, "r", encoding="utf-8") as fd:
+                dictj = json.load(fd)
+                for key, value in dictj.items():
+                    self.__objects[key] = eval(value['__class__'])(**value)
