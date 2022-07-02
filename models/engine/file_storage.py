@@ -45,5 +45,5 @@ class FileStorage:
         if os.path.exists(self.__file_path) is True:
             with open(self.__file_path, "r", encoding="utf-8") as fd:
                 dictj = json.load(fd)
-                for key, value in dictj.items():
-                    self.__objects[key] = eval(value['__class__'])(**value)
+            for key, value in dictj.items():
+                FileStorage.__objects[key] = eval(value['__class__'])(**value)
